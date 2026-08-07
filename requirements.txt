@@ -1,0 +1,52 @@
+# ── API & Orchestration ──────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+pydantic-settings==2.2.1
+python-multipart==0.0.9
+httpx==0.27.0
+
+# ── ML / Diffusion (2D Generation) ───────────────────────────────────────────
+torch==2.3.0
+torchvision==0.18.0
+diffusers==0.27.2
+transformers==4.41.1
+accelerate==0.30.0
+safetensors==0.4.3
+xformers==0.0.26.post1  # optional; speeds up attention
+
+# ── Image utilities ───────────────────────────────────────────────────────────
+Pillow==10.3.0
+numpy==1.26.4
+
+# ── Image-to-3D (TripoSR) ────────────────────────────────────────────────────
+# TripoSR is installed directly from git (see scripts/install_triposr.sh)
+# rembg for background removal before mesh generation
+rembg==2.0.57
+trimesh==4.3.2
+pygltflib==1.16.1
+
+# ── Vision-Language Model / Tagging ─────────────────────────────────────────
+openai==1.30.1          # GPT-4V fallback; also used for Ollama-compatible API
+ollama==0.2.0           # local Ollama Python client
+
+# ── Vector Database ───────────────────────────────────────────────────────────
+chromadb==0.5.0
+sentence-transformers==2.7.0   # embedding model for asset metadata
+
+# ── Scene Director LLM (Ollama / vLLM) ──────────────────────────────────────
+# ollama already listed above
+langchain==0.2.1
+langchain-community==0.2.1
+
+# ── Storage & Utilities ───────────────────────────────────────────────────────
+aiofiles==23.2.1
+python-dotenv==1.0.1
+boto3==1.34.107         # optional S3 asset storage
+loguru==0.7.2
+tenacity==8.3.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest==8.2.0
+pytest-asyncio==0.23.6
+httpx==0.27.0
