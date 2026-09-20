@@ -1,4 +1,4 @@
-# Rada AI
+# Still work in progress
 
 Spatial generative platform that merges the 2D aesthetic fidelity of Midjourney with the semantic 3D world-building of Promethean AI.
 
